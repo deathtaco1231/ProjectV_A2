@@ -18,6 +18,9 @@ int main(void) {
 	std::vector<STUDENT_DATA> studentDataVector;
 	while (!studentDataFile.eof()) {
 		getline(studentDataFile, line);
+		#ifdef _DEBUG
+		cout << line << endl;
+		#endif
 		std::stringstream curLine(line);
 		STUDENT_DATA curStudent;
 		getline(curLine, curStudent.FirstName, ',');
